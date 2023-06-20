@@ -1,0 +1,28 @@
+title{
+    font-family: Arial;
+    font-weight: bold;
+    font-style: italic;
+}
+author{
+    font-family: Helvetica;
+    color: cadetblue;
+}
+year{
+    font-family: Helvetica;
+    color: lightcoral;
+    font-size: smaller;
+    display: block;
+    text-indent: 15pt;
+}
+price{
+    font-family: Helvetica;
+    color: cadetblue;
+    text-decoration: line-through;
+}
+newprice{
+    font-family: Helvetica;
+    color: black;
+}
+[category]{
+    display: block;
+}

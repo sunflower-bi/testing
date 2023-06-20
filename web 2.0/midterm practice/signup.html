@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script>
+            function user_validate() {
+                user=document.getElementById("user");
+
+                userexp=/[0-4]{5}[A-Za-z]{3}[0-9]{4}$/;
+
+                if (user.value.length==0){
+                    alert("Username field is empty!");
+                    user.focus();
+                    return false;
+                }
+                else if(!user.value.match(userexp)){
+                    alert("Incorrect Username entered!");
+                    user.focus();
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </head>
+    <body>
+        <center> <form action="validation.html" target="_blank">
+            <h3>SIGN UP PAGE</h3>
+            Username: <input type="text" id="user"><br><br>
+            <input type="submit" value="Register" onclick="return user_validate()"> 
+        </form></center>
+    </body>
+</html>

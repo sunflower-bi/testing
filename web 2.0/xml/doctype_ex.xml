@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE note [
+    <!ENTITY nbsp "&#xA0;">
+    <!ENTITY writer "Mickey Mouse">
+    <!ENTITY copywrite "Copywrite: W3Schools">
+    <!ELEMENT note (to, from, heading, body, footer)>
+    <!ELEMENT to (#PCDATA)>
+    <!ELEMENT from (#PCDATA)>
+    <!ELEMENT heading (#PCDATA)>
+    <!ELEMENT body (#PCDATA)>
+    <!ELEMENT footer (#PCDATA)>
+]>
+<note>
+    <to>Tover</to>
+    <from>Jani</from>
+    <heading>Reminder</heading>
+    <body>Don't forget me this weekend!</body>
+    <footer>&writer;&nbsp;&copywrite;</footer>
+</note>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<?xml-stylesheet href="using_xsl.xsl" type="text/xsl"?>
+
+<pu>
+    <student-info>
+        <rollno>20211bca0023</rollno>
+        <name>Nabila Nausheen</name>
+        <college>Presidency University</college>
+        <branch>BCA</branch>
+        <year>2021</year>
+        <email>nabilazehra27@gmail.com</email>
+    </student-info>
+    <student-info>
+        <rollno>20211bca0039</rollno>
+        <name>Sai Sarayu</name>
+        <college>Presidency University</college>
+        <branch>BCA</branch>
+        <year>2021</year>
+        <email>saisarayu788@gmail.com</email>
+    </student-info>
+</pu>

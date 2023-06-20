@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>USN Validation</title>
+        <script type="text/JavaScript">
+            function validatedetails(){
+                var usn=document.getElementById("usn");
+                var sem=document.getElementById("sem");
+
+                var usnexp=/[0-4]{5}[A-Za-z]{3}[0-9]{4}$/;
+
+                if (usn.value.length == 0 || sem.value.length == 0){
+                    alert("One or more field(s) is empty!");
+                    usn.focus();
+                    return false;
+                }
+                else if (!usn.value.match(usnexp)){
+                    alert("Incorrect format entered in USN field!");
+                    usn.focus();
+                    return false;
+                }
+                else if (sem.value<1 || sem.value>6){
+                    alert("Incorrect value entered for Semester!");
+                    usn.focus();
+                    return false;
+                }
+                else{
+                    alert("Your details have been validated!");
+                    return true;
+                }
+            }
+        </script>
+        </head>
+        <body bgcolor="lightgreen">
+        <center><form><br><br>
+            <b>Enter USN Id:&nbsp&nbsp</b><input type="text" id="usn" name="usn"><br><br>
+
+            <b>Enter Semester:&nbsp&nbsp</b><input type="number" id="sem" name="sem"><br><br>
+
+            <input type="submit" onclick="validatedetails()" value="Check Details">
+
+        </form></center>
+    </body>
+</html>

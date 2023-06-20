@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="student_info_css.css"?>
+
+<presuni>
+    <student-info>
+        <roll>20211bca0023</roll>
+        <name>Nabila Nausheen</name>
+        <uni>Presidency University</uni>
+        <branch>BCA</branch>
+        <year>2021</year>
+        <email>nabilazehra27@gmail.com</email>
+    </student-info>
+    <student-info>
+        <roll>20211bca0039</roll>
+        <name>Sai Sarayu</name>
+        <uni>Presidency University</uni>
+        <branch>BCA</branch>
+        <year>2021</year>
+        <email>saisarayu@gmail.com</email>
+    </student-info>
+    <student-info>
+        <roll>20211bca0043</roll>
+        <name>Rithik Kumar</name>
+        <uni>Presidency University</uni>
+        <branch>BCA</branch>
+        <year>2021</year>
+        <email>rithikkumar@gmail.com</email>
+    </student-info>
+</presuni>

@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Paragraphs stacked on top of each other</title>
+        <style type="text/css">
+            .para1{
+                width: 300px;
+                background-color: aquamarine;
+                position: absolute;
+                top: 100px;
+                left: 200px;
+                z-index: 0;
+            }
+            .para2{
+                width: 300px;
+                background-color: bisque;
+                position: absolute;
+                top: 120px;
+                left: 220px;
+                z-index: 0;
+            }
+            .para3{
+                width: 300px;
+                background-color: cornflowerblue;
+                position: absolute;
+                top: 140px;
+                left: 240px;
+                z-index: 0;
+            }
+        </style>
+
+        <script type="text/javascript">
+            var topLayer="3";
+            var origPos;
+            function mover(toTop,pos){
+                var newTop=document.getElementById(toTop).style;
+                newTop.zIndex="10";
+                topLayer=document.getElementById(toTop).id;
+                origPos=pos;
+            }
+            function moveBack(){
+                document.getElementById(topLayer).style.zIndex=origPos;
+            }
+        </script>
+    </head>
+
+    <body bgcolor="lightgreen">
+        <center><h2>Paragraphs stacked on top of each other shown below</h2>
+            <div class="para1" id="1" onmouseover="mover('1','1')" onmouseout="moveBack()">
+                Rails is a development framework for Web-based applications that access databases.
+                A framework is a system in which much of the more-or-less standard software parts
+                are furnished by the framework, so they need not be written by the applications developer.
+            </div>
+            <div class="para2" id="2" onmouseover="mover('2','2')" onmouseout="moveBack()">
+                The original goal of JavaScript was to provide programming capability at both the server and
+                the client ends of a Web connection. Since then, JavaScript has grown into a full-fledged
+                programming language that can be used in a variety of application areas.
+            </div>
+            <div class="para3" id="3" onmouseover="mover('3','3')" onmouseout="moveBack()">
+                PHP is usually purely interpreted, as is the case with JavaScript. However, recent PHP
+                implementations perform some precompilation, at least on complex scripts, which increases
+                the speed of interpretation.
+            </div>
+        </center>
+    </body>
+</html>

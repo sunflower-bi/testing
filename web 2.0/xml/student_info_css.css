@@ -1,0 +1,30 @@
+roll{
+    font-family: 'Times New Roman';
+    color: brown;
+    font-size: x-small;
+}
+name{
+    font-family: 'Times New Roman';
+    color: chocolate;
+    font-size: small;
+}
+uni{
+    font-family: 'Times New Roman';
+    color: rosybrown;
+    font-size: medium;
+}
+branch{
+    font-family: 'Times New Roman';
+    color: lightcoral;
+    font-size: large;
+}
+year{
+    font-family: 'Times New Roman';
+    color: olivedrab;
+    font-size: larger;
+}
+email{
+    font-family: 'Times New Roman';
+    color: firebrick;
+    font-size: x-large;
+}

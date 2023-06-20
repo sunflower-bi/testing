@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script>
+            function validateForm(){
+                var x=document.forms["myform"]["fname"].value;
+                if (x==""){
+                    alert("Name must be filled out !!");
+                    return false;
+                }
+                var x=document.forms["myform"]["age"].value;
+                if (x==""){
+                    alert("Age must be filled out !!");
+                    return false;
+                }
+                var x=document.forms["myform"]["gender"].value;
+                if (x==""){
+                    alert("Gender must be selected !!");
+                    return false;
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <form name="myform" onsubmit="return validateForm()" method="post">
+            Name: <input type="text" name="fname" pattern="[A-Za-z].{5,}" title="Please ensure Name is greater than 5 charecters"><br><br>
+            Age: <input type="number" name="age" min="15" max="120" title="Please ensure Age is between 15 and 120"><br><br>
+            Gender: <input type="radio" name="gender" value="M">Male
+            <input type="radio" name="gender" value="F">Female<br><br>
+            <input type="submit" value="submit">
+        </form>
+    </body>
+</html>

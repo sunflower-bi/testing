@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title> SignUp Page </title>
+        <script type="text/javascript">
+            function validate_details() {
+                var rollno = document.getElementById("rollno");
+                var cur = document.getElementById("cur");
+                var per = document.getElementById("per");
+                var ch = document.getElementById("ch");
+    
+                if (rollno.value.length==0 || cur.value.length==0 || per.value.length==0 || ch.value.length==0){
+                    alert("One or more field(s) are empty!");
+                    rollno.focus();
+                    return false;
+                }
+                else if (rollno.value.length!=6){
+                    alert("Roll Number should be 6 digits long!");
+                    rollno.focus();
+                    return false;
+                }
+            }
+            function copy_fuc() {
+                var cur = document.getElementById("cur");
+                var per = document.getElementById("per");
+                per.value=cur.value;
+            }
+        </script>
+    </head>
+    <body>
+        <form onsubmit="return validate_details()" method="POST">
+            Roll Number:&nbsp;&nbsp;<input type="number" id="rollno"><br><br>
+            Current Address:&nbsp;&nbsp;<textarea id="cur"></textarea><br><br>
+            Is your current address the same as your permanent address?&nbsp;&nbsp;<input type="radio" id="ch" value="yes" onclick="copy_fuc()">YES
+            <input type="radio" id="ch" value="no">NO<br><br>
+            Permanent Address:&nbsp;&nbsp;<textarea id="per"></textarea><br><br>
+            <input type="submit" value="Happy Commuting!"></button>
+        </form>
+    </body>
+</html>

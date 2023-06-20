@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <style type="text/css">
+            body {
+                font-family: Helvetica;
+            }
+            p {
+                font-size: 10px;
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Form Validation Using Ajax</h2>
+        <h4>Fill the form given below:</h4>
+
+        Name: <input type="text" onblur="validate(this.value,'name')">
+        <p id="name"></p>
+        Mobile Number: <input type="number" onblur="validate(this.value,'mobile')">
+        <p id="mobile"></p>
+        Email: <input type="text" onblur="validate(this.value,'email')">
+        <p id="email"></p>
+        <input type="button" value="Submit">
+
+        <script>
+            function validate(str,id){
+                const xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (xhttp.readyState===4) {
+                        if (str.length == 0){
+                            document.getElementById(id).innerHTML=xhttp.responseText;
+                            return;
+                        }
+                    }
+                };
+                xhttp.open("GET","validate.html");
+                xhttp.send();
+            }
+        </script>
+    </body>
+</html>

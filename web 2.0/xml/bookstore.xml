@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="bookstore_css.css"?>
+
+<bookstore xmlns:c="children"
+xmlns:w="web">
+  <c:book category="children">
+    <c:title>Harry Potter</c:title>
+    <c:author>J K. Rowling</c:author>
+    <c:year>2005</c:year>
+    <c:price>29.99</c:price>
+    <c:newprice>19.99</c:newprice>
+  </c:book>
+  <w:book category="web">
+    <w:title>Learning XML</w:title>
+    <w:author>Erik T. Ray</w:author>
+    <w:year>2003</w:year>
+    <w:price>39.95</w:price>
+    <w:newprice>35.99</w:newprice>
+  </w:book>
+</bookstore>
