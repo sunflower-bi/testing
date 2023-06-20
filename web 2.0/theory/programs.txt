@@ -1,0 +1,249 @@
+associativearray.php
+
+<?php
+
+$salary = array("james" => 200, "shweta" => 100, "sunil" => 300);
+echo "Salary of James is ". $salary["james"];
+
+?>
+
+CallByVal&Ref.php
+
+<html>
+    <head> <title> Passing argument by value and by reference </title> </head>
+    <body>
+
+        <?php 
+        function addFive($num){
+            $num+=5;
+        }
+        function addSix(&$num){
+            $num+=6;
+        }
+
+        $orignum=10;
+
+        addFive($orignum);
+        echo "The original number is ". $orignum ."<br> <br>";
+
+        addSix($orignum);
+        echo "The original number is ". $orignum ."<br> <br>";
+
+        ?>
+
+    </body>
+</html>
+
+concat.php
+
+<?php
+
+$string1="Hello World";
+$string2="1234";
+
+echo $string1." ".$string2;
+
+?>
+
+foreach.php
+
+<html>
+    <body>
+
+    <h1> Foreach loop </h1>
+    <?php
+    $arr = array(12,73,83,27,83);
+    $count=1;
+    foreach ($arr as $val){
+        echo "Value of element $count is $val <br>";
+        $count++;
+    }
+    ?>
+
+</body>
+</html>
+
+form.php
+
+<html>
+    <body>
+        <form>
+            Enter First Number 
+            <input type="number" name="number1" /><br><br>
+            Enter Second Number 
+            <input type="number" name="number2" /><br><br>
+
+            <input type="submit" name="submit" value="ADD" />
+        </form>
+    </body>
+
+    <?php
+    $number1=$_GET['number1'];
+    $number2=$_GET['number2'];
+
+    $result=$number1+$number2;
+    
+    echo "The sum of $number1 and $number2 is $result."
+    ?>
+</html>
+
+get_method.php
+
+<?php
+if( $_GET['name'] && $_GET['age'] ){
+    echo "Welcome " .$_GET['name']. "<br>";
+    echo "You are " .$_GET['age']. " years old <br>";
+
+    exit();
+}
+
+?>
+
+<html>
+    <body>
+        <form action="<?php $_php_self ?>" method="GET">
+        Name: <input type="text" name="name" /><br><br>
+        Age: <input type="number" name="age" /><br><br>
+        <input type="submit" />
+        </form>
+    
+    </body>
+</html>
+
+hello.php
+
+<?php
+echo "Hello World";
+?>
+
+include&require.php
+
+<html>
+    <body>
+        <?php require("servertime.php"); ?>
+        <p> This is an example to show how to include PHP file ! </p>
+
+</body>
+</html>
+
+<!-- when include is used and the file does not exist then it will throw a warning but continue the execution,
+when require is used, the file is necessary and hence the program will throw an error and halt the execution -->
+
+post_method.php
+
+<?php
+if( $_REQUEST['name'] && $_REQUEST['age'] ){
+    echo "Welcome " .$_REQUEST['name']. "<br>";
+    echo "You are " .$_REQUEST['age']. " years old <br>";
+
+    exit();
+}
+
+?>
+
+<html>
+    <body>
+        <form action="<?php $_php_self ?>" method="POST">
+        Name: <input type="text" name="name" /><br><br>
+        Age: <input type="number" name="age" /><br><br>
+        <input type="submit" />
+        </form>
+    
+    </body>
+</html>
+
+returnval.php
+
+<html>
+    <head> <title> returning value through php function </title> </head>
+    <body>
+
+        <?php 
+        function addFunction($num1,$num2){
+            $sum=$num1+$num2;
+            return $sum;
+        }
+
+        $return_num=addFunction(10,20);
+        echo "Returned value from the function is ". $return_num ."<br> <br>";
+
+        ?>
+
+    </body>
+</html>
+
+servertime.php
+
+<?php
+$user="Nabila";
+?>
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<h1>Welcome <?php echo $user ;?> </h1>
+
+<p>
+The server time is
+<?php 
+echo "<strong>";
+echo date("H:i:s");
+echo "</strong>";
+?>
+</p>
+
+</body>
+</html>
+
+static.php
+
+<?php
+function myTest(){
+    static $a=0;
+    echo $a;
+    $a++;
+}
+
+myTest();
+echo "<br>";
+myTest();
+echo "<br>";
+myTest();
+
+?>
+
+sum.php
+
+<?php
+
+$x=5;
+$y=10;
+
+function myTest() {
+global $x,$y;
+$y=$x+$y;
+}
+
+myTest();
+echo $y;
+
+?>
+
+variablescope.php
+
+<?php
+
+$x=5;
+$y=10;
+
+function myTest() {
+$x,$y;
+$y=$x+$y;
+}
+
+myTest();
+echo $y;
+
+?>
