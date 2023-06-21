@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="products.xsl"?>
+
+<products>
+    <info>
+        <prod-id>0024</prod-id>
+        <name>Apple</name>
+        <category>Fruits and Veggies</category>
+        <price>100</price>
+    </info>
+    <info>
+        <prod-id>0073</prod-id>
+        <name>Bed frame</name>
+        <category>Furniture</category>
+        <price>3000</price>
+    </info>
+    <info>
+        <prod-id>0037</prod-id>
+        <name>Ceramic Plates</name>
+        <category>Kitchen</category>
+        <price>400</price>
+    </info>
+    <info>
+        <prod-id>0083</prod-id>
+        <name>Keyboard</name>
+        <category>Electronics</category>
+        <price>1200</price>
+    </info>
+    <info>
+        <prod-id>0029</prod-id>
+        <name>Strawberry</name>
+        <category>Fruits and Veggies</category>
+        <price>300</price>
+    </info>
+</products>

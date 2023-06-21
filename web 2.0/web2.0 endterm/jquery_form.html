@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js">
+            $(document).ready(function() {
+            $("#form").validate();
+            });
+        </script>
+
+        <style>
+            form .error{
+                color:red;
+                font-size: smaller;
+            }
+        </style>
+
+        <script>
+        $(document).ready(function () {
+
+            $("#form").validate({
+                rules: {
+                    mobile: {
+                        required: true,
+                        minlength: 10
+                    },
+                    firstname: {
+                        required: true 
+                    },
+                    lastname: {
+                        required: true 
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    }
+                },
+                messages: {
+                    mobile: {
+                        required: "This field is required",
+                        minlength: "Mobile number should be {0} digits long"
+                    },
+                    firstname: {
+                        required: "Enter your first name"
+                    },
+                    lastname: {
+                        required: "Enter your last name"
+                    },
+                    email: {
+                        required: "This field is required",
+                        email: "Enter a valid email ID",
+                    },
+                },
+            });
+        
+        });
+
+        </script>
+    </head>
+
+    <body>
+    <h2>Form Validation using JQuery</h2>
+
+        <form id="form" method="get" action="">
+
+            First name: <input type="text" name="firstname"> <br><br>
+            Last name: <input type="text" name="lastname"> <br><br>
+            Mobile: <input type="number" name="mobile"> <br><br>
+            Email:<input type="email" name="email"> <br><br>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
